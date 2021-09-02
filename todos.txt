@@ -1,7 +1,7 @@
 1. Title & make it wide
 2. pick good looking objects
 3. display score ---
-4. implement levels according to score
+4. implement levels according to score --- 
 5. make the reset game
 6. store high scores
 7. use sounds

@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <title>game</title>
     <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div>Score :<span id="score">0</span> </div>
-    <div id="game">
-        <div id="left"></div>
-        <div id="right"></div>
-        <div id="block"></div>
-        <div id="character"></div>
-        <div id="white"></div>
-    </div>
+  
+  <center><h1> Side-To-Side </h1></center>
+
+	<div class = "dashboard">
+		<div>Score :<span id="score">0</span> </div>	
+		<div>Level :<span id="level">0</span> </div>
+		<button type="Reset" onclick="document.location.reload()">Reset</button>
+		<div>High Score :<span id="highscore"></span> </div>
+	</div>	
+	
+	<div id="game">
+		<div id="left"></div>
+		<div id="right"></div>
+		<div id="block"></div>
+		<div id="character"></div>
+		<!-- <div id="white"></div> -->
+	</div>
+
+	<center><div id="message">Enjoy the Ride!</div></center>
 </body>
 <script src="script.js"></script>
 </html>

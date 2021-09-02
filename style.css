@@ -1,16 +1,21 @@
+:root {
+  --game-width: 900px;
+  --block-width: 300px;
+}
+
 *{
     padding: 0;
     margin: 0;
 }
 #game{
-    width: 300px;
+	width:var(--game-width);
     height: 500px;
     border: 1px solid black;
-    margin: auto;
+    margin: 20px auto;
     box-sizing: border-box;
 }
 #character{
-    width: 100px;
+    width: var(--block-width);
     height: 100px;
     background-color: red;
     position: relative;
@@ -21,12 +26,12 @@
     top: 500px;
     z-index: 100;
     position: absolute;
-    width: 300px;
+    width: var(--game-width);
     height: 130px;
     background-color: white;
 }
 #block{
-    width: 100px;
+    width: var(--block-width);
     height: 100px;
     top: 500px;
     background-color: black;
@@ -44,4 +49,19 @@
 }
 #right{
     left: 50%;
+}
+
+.dashboard{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  flex: 20%;
+  justify-content: space-evenly;
+  margin-top:50px;
+}
+
+#message{
+	font-size: 20px;
 }
