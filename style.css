@@ -31,7 +31,7 @@
     top: 500px;
     background-color: black;
     position: relative;
-    animation: slide 1s infinite linear;
+    animation: slide 2s infinite linear;
 }
 @keyframes slide{
     0%{top:-100px};
