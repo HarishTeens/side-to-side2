@@ -30,12 +30,13 @@
     height: 130px;
     background-color: white;
 }
-#block{
+.blocks{
     width: var(--block-width);
     height: 100px;
     top: 500px;
     background-color: black;
     position: relative;
+	display: inline-block;
     animation: slide 2s infinite linear;
 }
 @keyframes slide{
