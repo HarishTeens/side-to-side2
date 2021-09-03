@@ -13,7 +13,6 @@ const elements = {
 }
 
 // Game Setup
-
 gameHelpers.setup();
 
 // MOVEMENT
@@ -21,12 +20,12 @@ document.addEventListener("keydown", event => {
 	if (event.key === "ArrowLeft") { gameHelpers.moveLeft(); }
 	if (event.key === "ArrowRight") { gameHelpers.moveRight(); }
 });
-
 // Touch action for mobile instead of arrow keys
 document.getElementById("right").addEventListener("touchstart", moveRight);
 document.getElementById("left").addEventListener("touchstart", moveLeft);
 
+// EVERY ROUND 
 elements.blocks[0].addEventListener('animationiteration',gameHelpers.everyRound);
 
-// Core game logic to check hit
+// CORE GAME LOGIC
 setInterval(gameHelpers.checkHit, 1);

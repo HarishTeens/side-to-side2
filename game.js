@@ -1,3 +1,5 @@
+
+
 function moveLeft() {
 	let left = parseInt(window.getComputedStyle(elements.character).getPropertyValue("left"));
 	left -= 300;
@@ -32,9 +34,15 @@ function checkHit() {
 		gameOver();
 	}
 }
-
+let prevRandomOffset=0;
 function deployObstacles() {
-	const randomOffset= Math.floor(Math.random() * 3) ;
+	let randomOffset= Math.floor(Math.random() * 3) ;
+
+	console.log(prevRandomOffset,randomOffset);
+	if(randomOffset===prevRandomOffset)
+		randomOffset=(randomOffset+1)%3;
+	prevRandomOffset=randomOffset;
+	
 	const offsets=[[0,0],[BLOCK_WIDTH,BLOCK_WIDTH],[0,BLOCK_WIDTH]];
 	const leftOffset1=offsets[randomOffset][0];
 	const leftOffset2=offsets[randomOffset][1];
