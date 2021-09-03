@@ -7,17 +7,29 @@
     padding: 0;
     margin: 0;
 }
+
+body{
+	background: #161111 !important;
+    color: ghostwhite!important;
+}
+
 #game{
 	width:var(--game-width);
     height: 500px;
-    border: 1px solid black;
+    border: solid;
     margin: 20px auto;
     box-sizing: border-box;
+	background-image: url('assets/space.gif');
+	background-repeat: no-repeat;
+    background-size: 900px;	
 }
 #character{
     width: var(--block-width);
     height: 100px;
-    background-color: red;
+    background-image: url('assets/rocket.png');
+	background-size: 100px;
+    background-repeat: no-repeat;
+    background-position-x: center;
     position: relative;
     top: 300px;
     left: 0px;
@@ -34,10 +46,13 @@
     width: var(--block-width);
     height: 100px;
     top: 500px;
-    background-color: black;
     position: relative;
 	display: inline-block;
     animation: slide 2s infinite linear;
+	background-image: url('assets/obstacle.png');
+	background-size: 100px;
+    background-repeat: no-repeat;
+    background-position-x: center;
 }
 @keyframes slide{
     0%{top:-100px};

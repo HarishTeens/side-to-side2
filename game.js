@@ -38,7 +38,6 @@ let prevRandomOffset=0;
 function deployObstacles() {
 	let randomOffset= Math.floor(Math.random() * 3) ;
 
-	console.log(prevRandomOffset,randomOffset);
 	if(randomOffset===prevRandomOffset)
 		randomOffset=(randomOffset+1)%3;
 	prevRandomOffset=randomOffset;
