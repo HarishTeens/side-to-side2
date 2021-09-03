@@ -1,6 +1,7 @@
 :root {
   --game-width: 900px;
   --block-width: 300px;
+  --game-height: 600px;
 }
 
 *{
@@ -15,13 +16,13 @@ body{
 
 #game{
 	width:var(--game-width);
-    height: 500px;
+    height: var(--game-height);
     border: solid;
     margin: 20px auto;
     box-sizing: border-box;
 	background-image: url('assets/space.gif');
 	background-repeat: no-repeat;
-    background-size: 900px;	
+    background-size: 900px 600px;	
 }
 #character{
     width: var(--block-width);
@@ -31,21 +32,13 @@ body{
     background-repeat: no-repeat;
     background-position-x: center;
     position: relative;
-    top: 300px;
+    top: 400px;
     left: 0px;
-}
-#white{
-    top: 500px;
-    z-index: 100;
-    position: absolute;
-    width: var(--game-width);
-    height: 130px;
-    background-color: white;
 }
 .blocks{
     width: var(--block-width);
     height: 100px;
-    top: 500px;
+    top: var(--game-height);
     position: relative;
 	display: inline-block;
     animation: slide 2s infinite linear;
@@ -56,12 +49,12 @@ body{
 }
 @keyframes slide{
     0%{top:-100px};
-    100%{top:500px};
+    100%{top:var(--game-height)};
 }
 #left, #right{
     width:50%;
     position: absolute;
-    height: 500px;
+    height: var(--game-height);
 }
 #right{
     left: 50%;

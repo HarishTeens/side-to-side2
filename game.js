@@ -14,14 +14,7 @@ function moveRight() {
 		elements.character.style.left = left + "px";
 	}
 }
-function gameOver() {
-	alert("Game over. Score: " + score);
-	elements.blocks[0].style.animation = "none";
-	elements.blocks[1].style.animation = "none";
-	if (score > parseInt(localStorage.getItem("highScore")))
-		localStorage.setItem("highScore", score)
-	elements.highScore.innerText = localStorage.getItem("highScore")
-}
+
 
 function checkHit() {
 	const characterLeft = parseInt(window.getComputedStyle(elements.character).getPropertyValue("left"));
@@ -29,7 +22,7 @@ function checkHit() {
 	const blockLeft2 = parseInt(window.getComputedStyle(elements.blocks[1]).getPropertyValue("left"))+BLOCK_WIDTH;
 	const blockTop1 = parseInt(window.getComputedStyle(elements.blocks[0]).getPropertyValue("top"));
 	const blockTop2 = parseInt(window.getComputedStyle(elements.blocks[1]).getPropertyValue("top"));	
-	if ((characterLeft == blockLeft1 && blockTop1 < 500 && blockTop1 > 300) || (characterLeft == blockLeft2 && blockTop2 < 500 && blockTop2 > 300)) {
+	if ((characterLeft == blockLeft1 && blockTop1 < 600 && blockTop1 > 400) || (characterLeft == blockLeft2 && blockTop2 < 600 && blockTop2 > 400)) {
 		console.log(blockLeft1,blockLeft2,characterLeft);
 		gameOver();
 	}
@@ -72,6 +65,15 @@ function gameSetup() {
 	}
 	highScore = parseInt(localStorage.getItem("highScore"));
 	elements.highScore.innerText = highScore;
+}
+
+function gameOver() {
+	alert("Game over. Score: " + score);
+	elements.blocks[0].style.display = "none";
+	elements.blocks[1].style.display = "none";
+	if (score > parseInt(localStorage.getItem("highScore")))
+		localStorage.setItem("highScore", score)
+	elements.highScore.innerText = localStorage.getItem("highScore")
 }
 
 const gameHelpers ={
